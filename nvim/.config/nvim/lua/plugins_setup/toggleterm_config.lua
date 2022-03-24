@@ -1,6 +1,5 @@
-
 require("toggleterm").setup{
-    open_mapping = [[<C-m>]],
+    open_mapping = [[<C-t>]],
     direction = "float",
     shell = "fish",
     border = "curved",
