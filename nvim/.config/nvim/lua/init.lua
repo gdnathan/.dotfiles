@@ -9,6 +9,7 @@ require('plugins_setup.treesitter')
 require('plugins_setup.comment')
 require('plugins_setup.nvim-ts-context-commentary')
 require('plugins_setup.telescope-config')
+require('plugins_setup.toggleterm_config')
 
 require('remap')
 
