@@ -65,6 +65,7 @@ require('packer').startup(function()
     use 'tpope/vim-surround' -- use cs\--' to change \--bite\-- into 'bite', stuff like that
     use 'wesQ3/vim-windowswap' -- swap window <leader>ww to select and swap
     use "akinsho/toggleterm.nvim"
+    use "andweeb/presence.nvim"
 
     -- others
    use 'Nero-F/vim-tek-header'
