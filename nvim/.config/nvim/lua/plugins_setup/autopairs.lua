@@ -1,4 +1,9 @@
-require('nvim-autopairs').setup{}
+local status_ok, autopairs = pcall(require, "nvim-autopairs")
+if not status_ok then
+  return
+end
+
+autopairs.setup{}
 -- make nvim-autopairs work with nvim-completion
 local remap = vim.api.nvim_set_keymap
 local npairs = require('nvim-autopairs')

@@ -56,8 +56,8 @@ require('packer').startup(function()
     use 'nvim-telescope/telescope-frecency.nvim'
 
     -- UX
-    -- use 'tpope/vim-fugitive' -- git integration
-    use "kdheepak/lazygit.nvim"
+    use 'tpope/vim-fugitive' -- git integration
+    -- use "kdheepak/lazygit.nvim"
     use 'b0o/mapx.nvim'
     use 'windwp/nvim-autopairs' -- autaumatically close parenthesis, brackets...
     use 'numToStr/Comment.nvim'
@@ -70,4 +70,3 @@ require('packer').startup(function()
    use 'Nero-F/vim-tek-header'
 
 end)
-
