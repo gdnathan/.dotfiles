@@ -1,4 +1,5 @@
 require('plugins')
+require('settings')
 
 require('plugins_setup.tree')
 require('plugins_setup.autopairs')

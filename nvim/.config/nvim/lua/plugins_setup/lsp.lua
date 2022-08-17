@@ -60,6 +60,15 @@ lsp_installer.on_server_ready(function(server)
             }
         }
     end
+    if server.name == "rust_analyzer" then
+        opts.settings = {
+            ["rust-analyzer"] = {
+                diagnostics = {
+                    disabled = {"unresolved-proc-macro"}
+                }
+            }
+        }
+    end
 
     -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
     server:setup(opts)

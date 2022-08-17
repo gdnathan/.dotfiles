@@ -6,8 +6,13 @@ require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- LSP
-    use 'neovim/nvim-lspconfig'
-    use 'williamboman/nvim-lsp-installer' -- ONLY FOR LINUX BUILD
+    -- use
+    use {
+        'williamboman/nvim-lsp-installer', -- ONLY FOR LINUX BUILD
+        {
+            'neovim/nvim-lspconfig'
+        }
+    }
     use 'nvim-lua/lsp-status.nvim'
     use 'sbdchd/neoformat'
     use 'prettier/vim-prettier'
@@ -66,6 +71,8 @@ require('packer').startup(function()
     use 'wesQ3/vim-windowswap' -- swap window <leader>ww to select and swap
     use "akinsho/toggleterm.nvim"
     use "andweeb/presence.nvim"
+    use "gpanders/editorconfig.nvim" -- handle .editorconfig file
+    -- use "editorconfig/editorconfig-vim/issues" -- more complete version (less lightweight)
 
     -- others
    use 'Nero-F/vim-tek-header'

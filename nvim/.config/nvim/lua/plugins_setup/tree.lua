@@ -3,24 +3,39 @@ if not status_ok then
   return
 end
 
-vim.cmd [[let g:nvim_tree_group_empty = 1]]
-
 tree.setup {
-    auto_close          = true,
     open_on_setup       = true,
+    renderer = {
+        group_empty = true
+    },
     filters = {
         custom = {
             ".git",
             "node_modules",
             ".next"
+        },
+        exclude = {
+            ".git*"
+        }
+    },
+    view = {
+        mappings = {
+            list = {
+                {key = "<C-e>", action = ""},
+                {key = "e", action = "cd"}
+            }
         }
     }
 }
 
-local status2_ok, mapx = pcall(require, "mapx")
-if not status2_ok then
-  return
-end
-
-mapx.setup{ global = true }
-map("<C-e>", ":NvimTreeToggle<Cr>")
+vim.api.nvim_exec([[
+    nnoremap <C-e> :NvimTreeToggle<CR>
+]], false)
+--
+-- local status2_ok, mapx = pcall(require, "mapx")
+-- if not status2_ok then
+--   return
+-- end
+--
+-- mapx.setup{ global = true }
+-- map("<C-e>", ":NvimTreeToggle<Cr>")

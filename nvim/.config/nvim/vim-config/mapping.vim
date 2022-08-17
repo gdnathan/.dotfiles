@@ -19,7 +19,9 @@ nnoremap <C-Right> <C-w><Right>
 nnoremap [ zo :action CollapseBlock<CR>
 nnoremap ] zc :action ExpandBlock<CR>
 
-nnoremap <C-p> :action SearchEverywhere<CR>
+" Don't touch unnamed register when pasting over visual selection
+xnoremap <expr> p 'pgv"' . v:register . 'y'
+
 
 "map <Leader>f :CocFix<CR>
 map <Leader>gc :Git commit<CR>
@@ -47,7 +49,7 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
-imap <silent><script><expr> <Right> copilot#Accept("\<Right>")
-let g:copilot_no_tab_map = v:true
+" imap <silent><script><expr> <Right> copilot#Accept("\<Right>")
+" let g:copilot_no_tab_map = v:true
 
 
