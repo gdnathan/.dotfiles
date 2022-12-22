@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3400
-SETUVAR _fish_abbr__3A_log:git\x20log\x20\x2d\x2dgraph\x20\x2d\x2dabbrev\x2dcommit\x20\x2d\x2ddecorate\x20\x2d\x2dformat\x3dformat\x3a\x27\x25C\x28bold\x20blue\x29\x25h\x25C\x28reset\x29\x20\x2d\x20\x25C\x28bold\x20cyan\x29\x25aD\x25C\x28reset\x29\x20\x25C\x28bold\x20green\x29\x28\x25ar\x29\x25C\x28reset\x29\x25C\x28bold\x20yellow\x29\x25d\x25C\x28reset\x29\x25n\x27\x27\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x25C\x28white\x29\x25s\x25C\x28reset\x29\x20\x25C\x28dim\x20white\x29\x2d\x20\x25an\x25C\x28reset\x29\x27\x20\x2d\x2dall
+SETUVAR _fish_abbr__3A_log:git\x20log\x20\x2d\x2dgraph\x20\x2d\x2dabbrev\x2dcommit\x20\x2d\x2ddecorate\x20\x2d\x2dformat\x3dformat\x3a\x27\x25C\x28bold\x20blue\x29\x25h\x25C\x28reset\x29\x20\x2d\x20\x25C\x28bold\x20green\x29\x28\x25ar\x29\x25C\x28reset\x29\x20\x25C\x28white\x29\x25s\x25C\x28reset\x29\x20\x25C\x28dim\x20white\x29\x2d\x20\x25an\x25C\x28reset\x29\x25C\x28bold\x20yellow\x29\x25d\x25C\x28reset\x29\x27\x20\x2d\x2dall
 SETUVAR _fish_abbr__3A_q:exit
 SETUVAR _fish_abbr_g:lazygit
 SETUVAR _fish_abbr_l:exa\x20\x2dla
@@ -9,8 +9,9 @@ SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_nvimrc:cd\x20\x7e/\x2econfig/nvim\x20\x3b\x20nvim\x20\x3b\x20cd\x20\x2d
 SETUVAR _fish_abbr_sperme:echo\x20\x22en\x20plein\x20dans\x20la\x20bouche\x20\x5e\x5e\x22
 SETUVAR _fish_abbr_vim:nvim
-SETUVAR _fisher_edc_2F_bass_files:/home/erudyx/\x2econfig/fish/functions/__bass\x2epy\x1e/home/erudyx/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_plugins:edc/bass
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:747369
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:99cc99
@@ -41,4 +42,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/erudyx/\x2econfig/yarn/global\x1e/home/erudyx/apps\x1e/home/erudyx/\x2ecargo/bin\x1e/home/erudyx/\x2eyarn/bin
+SETUVAR fish_user_paths:/home/erudyx/\x2elocal/bin\x1e/home/erudyx/\x2econfig/yarn/global\x1e/home/erudyx/apps\x1e/home/erudyx/\x2ecargo/bin\x1e/home/erudyx/\x2eyarn/bin

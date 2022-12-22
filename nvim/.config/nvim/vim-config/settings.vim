@@ -43,6 +43,6 @@ set completeopt=menu,menuone,noselect
 
 set mouse=n
 set mouse-=a
-set nofoldenable
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+" set nofoldenable
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()

@@ -7,12 +7,16 @@ require('packer').startup(function()
 
     -- LSP
     -- use
+    -- use {
+    --     'williamboman/nvim-lsp-installer', -- ONLY FOR LINUX BUILD
+        -- {
     use {
-        'williamboman/nvim-lsp-installer', -- ONLY FOR LINUX BUILD
-        {
-            'neovim/nvim-lspconfig'
-        }
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
     }
+    --     }
+    -- }
     use 'nvim-lua/lsp-status.nvim'
     use 'sbdchd/neoformat'
     use 'prettier/vim-prettier'
@@ -34,18 +38,18 @@ require('packer').startup(function()
     use 'dkasak/gruvbox'
     use 'dracula/vim'
 
-    --DEBUGER
+    --debuger
     --use 'puremourning/vimspector' -- require python 3
 
-    --UI
+    --ui
     use 'travitch/hasksyn' -- syntax hightlighting for haskell
     use 'hoob3rt/lualine.nvim'
     use 'airblade/vim-gitgutter' -- +, - and ~ for git diff (added/removed/modified)
     use 'norcalli/nvim-colorizer.lua' -- highlight hexa colors in coresponding color
     use 'psliwka/vim-smoothie' -- nice and smooth scroll
-    use 'ntpeters/vim-better-whitespace' -- every trailing spaces in RED. :StripWhitespaces to del them all
+    use 'ntpeters/vim-better-whitespace' -- every trailing spaces in red. :stripwhitespaces to del them all
     use 'ryanoasis/vim-devicons' -- icons
-    use 'RRethy/vim-illuminate' -- highlight other uses of the word under the cursor
+    use 'rrethy/vim-illuminate' -- highlight other uses of the word under the cursor
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',

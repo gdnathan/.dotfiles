@@ -16,6 +16,14 @@ nnoremap <C-Up> <C-w><Up>
 nnoremap <C-Left> <C-w><Left>
 nnoremap <C-Right> <C-w><Right>
 
+nnoremap <C-j> <C-w><Down>
+nnoremap <C-k> <C-w><Up>
+nnoremap <C-h> <C-w><Left>
+nnoremap <C-l> <C-w><Right>
+
+nnoremap <S-j> <S-Down>
+nnoremap <S-k> <S-Up>
+
 nnoremap [ zo :action CollapseBlock<CR>
 nnoremap ] zc :action ExpandBlock<CR>
 
