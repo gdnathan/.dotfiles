@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 lualine.setup{
-    options = {theme = 'dracula'}
+    -- options = {theme = 'nord'}
 }
 
 

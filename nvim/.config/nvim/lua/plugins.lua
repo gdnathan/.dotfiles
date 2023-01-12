@@ -9,7 +9,7 @@ require('packer').startup(function()
     -- use
     -- use {
     --     'williamboman/nvim-lsp-installer', -- ONLY FOR LINUX BUILD
-        -- {
+    -- {
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -21,22 +21,25 @@ require('packer').startup(function()
     use 'sbdchd/neoformat'
     use 'prettier/vim-prettier'
     -- hightlighting
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-   -- completion tools:
-   use 'hrsh7th/nvim-cmp'
-   use 'hrsh7th/cmp-nvim-lsp'
-   use 'hrsh7th/cmp-buffer'
-   use 'hrsh7th/cmp-vsnip'
-   use 'hrsh7th/vim-vsnip'
-   use 'rafamadriz/friendly-snippets'
-   use 'github/copilot.vim'
-   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+    -- completion tools:
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
+    use 'rafamadriz/friendly-snippets'
+    use 'github/copilot.vim'
+    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
 
     --themes
     use 'arcticicestudio/nord-vim'
     use 'dkasak/gruvbox'
     use 'dracula/vim'
+    use 'EdenEast/nightfox.nvim'
 
     --debuger
     --use 'puremourning/vimspector' -- require python 3
@@ -56,7 +59,7 @@ require('packer').startup(function()
     }
 
     --telescope
-    use {'nvim-telescope/telescope.nvim', require = {'nvim-lua/plenary.nvim'}}
+    use { 'nvim-telescope/telescope.nvim', require = { 'nvim-lua/plenary.nvim' } }
     use 'nvim-lua/plenary.nvim'
     use 'luc-tielen/telescope_hoogle'
     use 'nvim-lua/popup.nvim'
@@ -77,8 +80,14 @@ require('packer').startup(function()
     use "andweeb/presence.nvim"
     use "gpanders/editorconfig.nvim" -- handle .editorconfig file
     -- use "editorconfig/editorconfig-vim/issues" -- more complete version (less lightweight)
-
+    use {
+        'saecki/crates.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
     -- others
-   use 'Nero-F/vim-tek-header'
+    use 'Nero-F/vim-tek-header'
 
 end)

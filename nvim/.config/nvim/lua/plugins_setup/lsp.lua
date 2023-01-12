@@ -78,33 +78,36 @@ require('lspconfig')['clangd'].setup{
     capabilities = capabilities
 }
 
-require('lspconfig')['hls'].setup{
-    on_attach = on_attach,
-}
+-- require('lspconfig')['hls'].setup{
+--     on_attach = on_attach,
+-- }
 require('lspconfig')['dockerls'].setup{
     on_attach = on_attach,
+    capabilities = capabilities
 }
 require('lspconfig')['marksman'].setup{
     on_attach = on_attach,
+    capabilities = capabilities
 }
 require('lspconfig')['sumneko_lua'].setup{
     on_attach = on_attach,
+    capabilities = capabilities
 }
 -- require('lspconfig')['solang'].setup{
 --     on_attach = on_attach,
 -- }
 require('lspconfig')['solidity'].setup{
     on_attach = on_attach,
+    capabilities = capabilities
 }
 -- require('lspconfig')['solc'].setup{
 --     on_attach = on_attach,
 -- }
 require('lspconfig')['vimls'].setup{
     on_attach = on_attach,
-}
-require('lspconfig')['jdtls'].setup{
-    on_attach = on_attach,
+    capabilities = capabilities
 }
 require('lspconfig')['grammarly'].setup{
     on_attach = on_attach,
+    capabilities = capabilities
 }
