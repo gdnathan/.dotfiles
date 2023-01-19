@@ -47,6 +47,7 @@ require('packer').startup(function()
     --ui
     use 'travitch/hasksyn' -- syntax hightlighting for haskell
     use 'hoob3rt/lualine.nvim'
+    use 'arkav/lualine-lsp-progress'
     use 'airblade/vim-gitgutter' -- +, - and ~ for git diff (added/removed/modified)
     use 'norcalli/nvim-colorizer.lua' -- highlight hexa colors in coresponding color
     use 'psliwka/vim-smoothie' -- nice and smooth scroll
@@ -59,7 +60,7 @@ require('packer').startup(function()
     }
 
     --telescope
-    use { 'nvim-telescope/telescope.nvim', require = { 'nvim-lua/plenary.nvim' } }
+    use { 'nvim-telescope/telescope.nvim', require = 'nvim-lua/plenary.nvim' }
     use 'nvim-lua/plenary.nvim'
     use 'luc-tielen/telescope_hoogle'
     use 'nvim-lua/popup.nvim'
@@ -89,5 +90,15 @@ require('packer').startup(function()
     }
     -- others
     use 'Nero-F/vim-tek-header'
+    -- debug
+    use 'dstein64/vim-startuptime'
+
+
+    -- ideas
+    --
+    -- basically a tab pane
+    -- use 'akinsho/bufferline.nvim'
+
+    --
 
 end)

@@ -13,5 +13,6 @@ require('plugins_setup.comment')
 require('plugins_setup.telescope-config')
 require('plugins_setup.toggleterm_config')
 require('plugins_setup.copilot')
+require('plugins_setup.crate')
 
 require('remap')

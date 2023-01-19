@@ -34,6 +34,9 @@ local on_attach = function(_, bufnr)
 
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.offsetEncoding = { "utf-16" }
+
 require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
     settings = {
@@ -42,7 +45,8 @@ require('lspconfig')['rust_analyzer'].setup{
             disabled = {"unresolved-proc-macro"}
         }
       }
-    }
+    },
+    capabilities = capabilities
 }
 require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
@@ -61,10 +65,9 @@ require('lspconfig')['tsserver'].setup{
         completions = {
             completeFunctionCalls = true
         },
-    }
+    },
+    capabilities = capabilities
 }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.offsetEncoding = { "utf-16" }
 require('lspconfig')['clangd'].setup{
     on_attach = on_attach,
     settings = {
@@ -108,6 +111,10 @@ require('lspconfig')['vimls'].setup{
     capabilities = capabilities
 }
 require('lspconfig')['grammarly'].setup{
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+require('lspconfig')['pylsp'].setup{
     on_attach = on_attach,
     capabilities = capabilities
 }
