@@ -3,8 +3,10 @@ if not status_ok then
   return
 end
 
+-- tree.api.open()
+
 tree.setup {
-    open_on_setup       = true,
+    -- open_on_setup       = true,
     renderer = {
         group_empty = true
     },
@@ -28,14 +30,16 @@ tree.setup {
     }
 }
 
-vim.api.nvim_exec([[
-    nnoremap <C-e> :NvimTreeToggle<CR>
-]], false)
---
--- local status2_ok, mapx = pcall(require, "mapx")
--- if not status2_ok then
---   return
--- end
---
--- mapx.setup{ global = true }
--- map("<C-e>", ":NvimTreeToggle<Cr>")
+-- vim.api.nvim_exec([[
+--   nnoremap <C-e> :NvimTreeToggle<CR>
+-- ]], false)
+
+local status2_ok, mapx = pcall(require, "mapx")
+if not status2_ok then
+  return
+end
+
+local nnoremap = require'mapx'.nnoremap
+nnoremap("<C-e>", ":NvimTreeToggle<Cr>")
+
+-- require("nvim-web-devicons").set_default_icon('', '#FFff00')

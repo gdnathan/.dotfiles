@@ -8,6 +8,6 @@ toggleterm.setup{
     direction = "float",
     shell = "fish",
     border = "curved",
-    -- vim.api.nvim_set_keymap("t", "<esc>", [[<C-\><C-n>]], {noremap = true, silent = true}), -- esc to go to normal mode
+    vim.api.nvim_set_keymap("t", "<C-e>", [[<C-\><C-n>]], {noremap = true, silent = true}), -- esc to go to normal mode
 }
 

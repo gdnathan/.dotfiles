@@ -26,7 +26,7 @@ set nocp
 set termguicolors
 
 "set mouse=a " activate the mouse
-set tags+=/usr/include/**/tags " include user tags when generating tags
+" set tags+=/usr/include/**/tags " include user tags when generating tags
 "exclude temp file from autocompletion
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite "
 set autoread " edit vim file when modified somewhere else
@@ -36,13 +36,16 @@ set autoread " edit vim file when modified somewhere else
 "*****************************************************************************
 set relativenumber " display line nbr at the left
 set number " display line nbr at the left
-silent! colorscheme gruvbox " choose color theme
+" silent! colorscheme gruvbox
+silent! colorscheme dracula
 set mousemodel=popup " right click doesnt trigger visual mode
 
-set completeopt=menu,menuone,noselect
+" set completeopt=menu,menuone,noselect
 
 set mouse=n
 set mouse-=a
-" set nofoldenable
-" set foldmethod=expr
-" set foldexpr=nvim_treesitter#foldexpr()
+
+set foldenable
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set foldlevel=9999

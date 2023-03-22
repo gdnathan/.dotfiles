@@ -1,8 +1,8 @@
+-- to source this file and make packer's command available: `:so`
+
 vim.cmd [[packadd packer.nvim]]
 
-require('packer').startup(function()
-    local use = require('packer').use
-
+return require('packer').startup({ function(use)
     use 'wbthomason/packer.nvim'
 
     -- LSP
@@ -51,12 +51,26 @@ require('packer').startup(function()
     use 'airblade/vim-gitgutter' -- +, - and ~ for git diff (added/removed/modified)
     use 'norcalli/nvim-colorizer.lua' -- highlight hexa colors in coresponding color
     use 'psliwka/vim-smoothie' -- nice and smooth scroll
-    use 'ntpeters/vim-better-whitespace' -- every trailing spaces in red. :stripwhitespaces to del them all
+    -- off until whitespace in terminal are not showed
+    -- use 'ntpeters/vim-better-whitespace' -- every trailing spaces in red. :stripwhitespaces to del them all
     use 'ryanoasis/vim-devicons' -- icons
     use 'rrethy/vim-illuminate' -- highlight other uses of the word under the cursor
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
+    }
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            { 'MunifTanjim/nui.nvim' }
+        }
+    }
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
     }
 
     --telescope
@@ -69,8 +83,6 @@ require('packer').startup(function()
     use 'nvim-telescope/telescope-frecency.nvim'
 
     -- UX
-    use 'tpope/vim-fugitive' -- git integration
-    -- use "kdheepak/lazygit.nvim"
     use 'b0o/mapx.nvim'
     use 'windwp/nvim-autopairs' -- autaumatically close parenthesis, brackets...
     use 'numToStr/Comment.nvim'
@@ -92,6 +104,7 @@ require('packer').startup(function()
     use 'Nero-F/vim-tek-header'
     -- debug
     use 'dstein64/vim-startuptime'
+    use 'raghur/vim-ghost'
 
 
     -- ideas
@@ -101,4 +114,11 @@ require('packer').startup(function()
 
     --
 
-end)
+end,
+    config = {
+        display = {
+            open_fn = require('packer.util').float,
+        }
+    }
+})
+
