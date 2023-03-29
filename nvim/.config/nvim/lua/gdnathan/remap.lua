@@ -27,9 +27,9 @@ nnoremap("<C-Left>", "<C-w><Left>")
 nnoremap("J", "<S-Down>")
 nnoremap("K", "<S-Up>")
 
-xnoremap('p', [[pgv"]]..vim.v.register..[[y]], {expr = true})
+xnoremap('p', '"_dP', {noremap = true, silent = true})
 
-nnoremap("x", '"_x')
+xnoremap("x", '"_x')
 nnoremap("m", "za")
 
 -- map('x', 'p', '_dP', {noremap = true, silent = true})
