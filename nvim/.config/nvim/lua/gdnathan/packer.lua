@@ -76,6 +76,7 @@ return require('packer').startup({ function(use)
     --telescope
     use { 'nvim-telescope/telescope.nvim', require = 'nvim-lua/plenary.nvim' }
     use 'nvim-lua/plenary.nvim'
+    use 'mfussenegger/nvim-dap'
     use 'luc-tielen/telescope_hoogle'
     use 'nvim-lua/popup.nvim'
     use 'nvim-telescope/telescope-symbols.nvim'
@@ -100,11 +101,12 @@ return require('packer').startup({ function(use)
             require('crates').setup()
         end,
     }
+
+    use 'simrat39/rust-tools.nvim'
     -- others
     use 'Nero-F/vim-tek-header'
     -- debug
     use 'dstein64/vim-startuptime'
-    use 'raghur/vim-ghost'
 
 
     -- ideas
