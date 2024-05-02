@@ -75,6 +75,8 @@ return require('packer').startup({ function(use)
 
     --telescope
     use { 'nvim-telescope/telescope.nvim', require = 'nvim-lua/plenary.nvim' }
+    use {'nvim-telescope/telescope-smart-history.nvim', require = 'kkharji/sqlite.lua'}
+    use 'kkharji/sqlite.lua'
     use 'nvim-lua/plenary.nvim'
     use 'mfussenegger/nvim-dap'
     use 'luc-tielen/telescope_hoogle'
