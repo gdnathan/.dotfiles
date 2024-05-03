@@ -8,3 +8,13 @@ end
 
 telescope.load_extension('media_files')
 telescope.load_extension('hoogle')
+telescope.load_extension('smart_history')
+
+telescope.setup {
+  defaults = {
+    history = {
+      path = '~/.local/share/nvim/databases/telescope_history.sqlite3',
+      limit = 100,
+    }
+  }
+}

@@ -74,6 +74,8 @@ return require('packer').startup({ function(use)
 
     --telescope
     use { 'nvim-telescope/telescope.nvim', require = 'nvim-lua/plenary.nvim' }
+    use {'nvim-telescope/telescope-smart-history.nvim', require = 'kkharji/sqlite.lua'}
+    use 'kkharji/sqlite.lua'
     use 'nvim-lua/plenary.nvim'
     use 'mfussenegger/nvim-dap'
     use 'luc-tielen/telescope_hoogle'
@@ -86,7 +88,7 @@ return require('packer').startup({ function(use)
     use 'b0o/mapx.nvim'
     use 'windwp/nvim-autopairs' -- autaumatically close parenthesis, brackets...
     use 'numToStr/Comment.nvim'
-    use({ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" })
+    -- use({ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" })
     use 'tpope/vim-surround' -- use cs\--' to change \--bite\-- into 'bite', stuff like that
     use 'wesQ3/vim-windowswap' -- swap window <leader>ww to select and swap
     use "akinsho/toggleterm.nvim"
