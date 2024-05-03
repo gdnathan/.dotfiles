@@ -4,10 +4,10 @@ if not status_ok then
 end
 
 comment.setup{
-    ---@param ctx Ctx
-    pre_hook = function(ctx)
-        return require('ts_context_commentstring.internal').calculate_commentstring()
-    end
+--    ---@param ctx Ctx
+--    pre_hook = function(ctx)
+--        return require('ts_context_commentstring.internal').calculate_commentstring()
+--    end
 
 }
 

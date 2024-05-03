@@ -33,7 +33,7 @@ return require('packer').startup({ function(use)
     use 'hrsh7th/vim-vsnip'
     use 'rafamadriz/friendly-snippets'
     use 'github/copilot.vim'
-    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
+    -- use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
 
     --themes
     use 'arcticicestudio/nord-vim'
@@ -45,7 +45,6 @@ return require('packer').startup({ function(use)
     --use 'puremourning/vimspector' -- require python 3
 
     --ui
-    use 'travitch/hasksyn' -- syntax hightlighting for haskell
     use 'hoob3rt/lualine.nvim'
     use 'arkav/lualine-lsp-progress'
     use 'airblade/vim-gitgutter' -- +, - and ~ for git diff (added/removed/modified)
@@ -91,7 +90,6 @@ return require('packer').startup({ function(use)
     use 'tpope/vim-surround' -- use cs\--' to change \--bite\-- into 'bite', stuff like that
     use 'wesQ3/vim-windowswap' -- swap window <leader>ww to select and swap
     use "akinsho/toggleterm.nvim"
-    use "andweeb/presence.nvim"
     use "gpanders/editorconfig.nvim" -- handle .editorconfig file
     -- use "editorconfig/editorconfig-vim/issues" -- more complete version (less lightweight)
     use {
@@ -101,6 +99,7 @@ return require('packer').startup({ function(use)
             require('crates').setup()
         end,
     }
+    use 'kevinhwang91/nvim-bqf'
 
     use 'simrat39/rust-tools.nvim'
     -- others

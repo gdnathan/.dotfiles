@@ -21,11 +21,13 @@ opt.smartcase = true
 -- using system clipboard
 opt.clipboard="unnamedplus"
 
+-- echo "é" | iconv -f UTF-8 -t UTF-16LE | clip.exe
+
 -- "exclude temp file from autocompletion
 opt.wildignore:append("*/tmp/*", "*.so", "*.swp" ,"*.zip", "*.pyc", "*.db", "*.sqlite")
 
 opt.relativenumber = true -- relative numbers
-opt.number = true -- line number instead of 0 when using relative numbers
+opt.number = true -- line number instead of 0 when using relative numbers éé
 opt.mousemodel = "popup" -- " right click doesnt trigger visual mode
 
 opt.mouse = "n"

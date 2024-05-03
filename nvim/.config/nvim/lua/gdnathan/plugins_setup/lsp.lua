@@ -1,6 +1,7 @@
 -- local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 -- if not status_ok then
 --   return
+--
 -- end
 
 
@@ -72,7 +73,6 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     vim.keymap.set('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
     vim.keymap.set('n', '<C-Space>', function() vim.lsp.buf.format { async = true } end, opts)
-
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -140,7 +140,11 @@ require('lspconfig')['marksman'].setup {
 -- require('lspconfig')['solang'].setup{
 --     on_attach = on_attach,
 -- }
-require('lspconfig')['solidity'].setup {
+require('lspconfig')['solang'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+require('lspconfig')['lua_ls'].setup {
     on_attach = on_attach,
     capabilities = capabilities
 }

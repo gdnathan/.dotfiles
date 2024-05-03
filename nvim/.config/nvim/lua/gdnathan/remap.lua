@@ -15,6 +15,13 @@ nnoremap ("fd" ,":lua require('telescope.builtin').diagnostics()<cr>")
 
 nnoremap("<C-q>", ":GhostStart<cr>")
 
+-- nnoremap("<S-Down>", "<C-d>")
+-- nnoremap("<S-Up>", "<C-u>")
+vim.cmd("\
+nnoremap <unique> <S-Down> <cmd>call smoothie#do(\"<C-D>\") <CR>\
+vnoremap <unique> <S-Up> <cmd>call smoothie#do(\"<C-U>\") <CR>\
+")
+
 nnoremap("<C-j>", "<C-w><Down>")
 nnoremap("<C-k>", "<C-w><Up>")
 nnoremap("<C-l>", "<C-w><Right>")

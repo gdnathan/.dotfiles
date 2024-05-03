@@ -7,8 +7,12 @@ lualine.setup {
     -- extensions = { 'toggleterm' },
     sections = {
         lualine_c = {
-            ...,
+            'filename',
             'lsp_progress'
         }
-    }
+    },
+    inactive_sections = {
+        lualine_c = {
+        }
+    },
 }
