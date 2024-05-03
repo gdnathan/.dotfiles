@@ -9,4 +9,7 @@ export PATH="$PATH:/home/erudyx/.foundry/bin"
 export GPG_TTY=$(tty)
 
 status --is-interactive; and rbenv init - fish | source
-alias xdg-open "cmd.exe /C start"
+# alias xdg-open "cmd.exe /C start"
+
+#alias xdg-open "cmd.exe /C cd /d %USERPROFILE% && cmd.exe \C start"
+
